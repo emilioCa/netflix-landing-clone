@@ -3,8 +3,7 @@ const tabContentItems = document.querySelectorAll('.tab-content-item');
 
 // Select tab content item
 function selectItem(e) {
-    removeBorder();
-    removeShow();
+    removeClass();
 
     // Add border to current tab
     this.classList.add('tab-border');
@@ -14,11 +13,8 @@ function selectItem(e) {
     tabContentItem.classList.add('show');
 }
 
-function removeBorder() {
+function removeClass() {
     tabItems.forEach(item => item.classList.remove('tab-border'));
-}
-
-function removeShow() {
     tabContentItems.forEach(item => item.classList.remove('show'));
 }
 
